@@ -7,7 +7,7 @@ function App() {
     <div>
 
 <Header></Header>
-<h1> This is thw main container </h1>
+<h1> This is themain container </h1>
 <Footer></Footer>
     </div>
    
