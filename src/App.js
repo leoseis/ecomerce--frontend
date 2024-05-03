@@ -1,16 +1,19 @@
-import './App.css';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import { Container } from "react-bootstrap";
+import "./App.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-
-<Header></Header>
-<h1> This is themain container </h1>
-<Footer></Footer>
+      <Header />
+      <main>
+        <Container>
+          <h1> This is the main container </h1>
+        </Container>
+      </main>
+      <Footer />
     </div>
-   
   );
 }
 
