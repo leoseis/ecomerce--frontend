@@ -6,9 +6,9 @@ function Header() {
   return (
     <div>
       
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-dark" variant='dark'>
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#">LEE CODER</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -17,7 +17,8 @@ function Header() {
             navbarScroll
           >
             <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
+            <Nav.Link href="#action2">Cart</Nav.Link>
+            <Nav.Link href="#action2">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

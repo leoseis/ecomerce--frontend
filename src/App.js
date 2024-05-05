@@ -9,7 +9,7 @@ function App() {
       <Header />
       <main>
         <Container>
-          <h1> This is the main container </h1>
+          <h1> Welcome to my shop </h1>
         </Container>
       </main>
       <Footer />
