@@ -16,9 +16,9 @@ function Header() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Cart</Nav.Link>
-            <Nav.Link href="#action2">Login</Nav.Link>
+            <Nav.Link href="/"><i className='fas fa-home'></i>Home</Nav.Link>
+            <Nav.Link href="/"><i className='fas fa-shopping-cart'></i>Cart</Nav.Link>
+            <Nav.Link href="/"><i className='fas fa-user'></i>Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
