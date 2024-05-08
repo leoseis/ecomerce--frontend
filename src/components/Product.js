@@ -1,0 +1,1 @@
+// we ned to create the card through boostrap create product id ,image etc
