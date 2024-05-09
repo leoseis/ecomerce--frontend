@@ -1,1 +1,16 @@
-// we ned to create the card through boostrap create product id ,image etc
+import React from "react";
+import { Card } from "react-bootstrap";
+
+function Product({ product }) {
+  return (
+    <Card className="my-3 p-3 rounded">
+      <a href={"/product/${product._id}"}>
+        <Card.Img src={product.image} />
+      </a>
+    </Card>
+  );
+}
+
+export default Product;
+
+// we need to create the card through boostrap create product id ,image etc
