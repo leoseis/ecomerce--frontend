@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar, Nav,Container,Rows} from 'react-bootstrap'
+import {Navbar, Nav,Container,} from 'react-bootstrap'
 
 
 function Header() {
@@ -8,7 +8,7 @@ function Header() {
       
       <Navbar expand="lg" className="bg-dark" variant='dark'>
       <Container fluid>
-        <Navbar.Brand href="#">LEE CODER</Navbar.Brand>
+        <Navbar.Brand href="#">LEO's SHOP</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
