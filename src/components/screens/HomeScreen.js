@@ -10,9 +10,9 @@ function HomeScreen() {
       <h1 className='text-center'>Latest products</h1>
       <Row>
         {products.map((product)=>(
-        <Col sm={12} md={6} lg={4} xl={3}>                                            
+        <Col key ={product._id}sm={12} md={6} lg={4} xl={3}>                                            
           {/* <h3>{product.name}</h3> */}
-          <Product product = {product}/>     
+        <Product product = {product}/>              {/* loading Product.js  file, and passing product as props */}
         </Col>
 
 
