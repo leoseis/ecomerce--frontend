@@ -1,5 +1,6 @@
 import React from "react";
 import {Card} from "react-bootstrap";
+import Rating from "./Rating";
 
 function Product({product}) {
   return (
@@ -23,6 +24,7 @@ function Product({product}) {
          ${product.price}
         </div>
       </Card.Text>
+      <Rating value ={product.rating}text ={`${product.numReviews}reviews`} color ={'#f8e825'}/>    {/*the rating value takes 3 arguments as props */}
       </Card.Body>
     </Card>
   )
