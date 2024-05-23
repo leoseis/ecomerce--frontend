@@ -1,5 +1,6 @@
 import React from 'react'
 import {Navbar, Nav,Container,} from 'react-bootstrap'
+import {LinkContainer  } from 'react-router-bootstrap'
 
 
 function Header() {
@@ -7,18 +8,28 @@ function Header() {
     <div>
       
       <Navbar expand="lg" className="bg-dark" variant='dark'>
-      <Container fluid>
+    <Container fluid>                                                
+        <LinkContainer  to="/">        
         <Navbar.Brand href="#">LEO's SHOP</Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
             navbarScroll
-          >
-            <Nav.Link href="/"><i className='fas fa-home'></i>Home</Nav.Link>
-            <Nav.Link href="/"><i className='fas fa-shopping-cart'></i>Cart</Nav.Link>
-            <Nav.Link href="/"><i className='fas fa-user'></i>Login</Nav.Link>
+          >                                                                                                                                                               
+            <LinkContainer to="/">
+            <Nav.Link ><i className='fas fa-home'></i>Home</Nav.Link>
+            </LinkContainer>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
+            <LinkContainer to='/cart'>
+            <Nav.Link ><i className='fas fa-shopping-cart'></i>Cart</Nav.Link>
+            </LinkContainer>
+
+            <LinkContainer to='/login'>
+            <Nav.Link ><i className='fas fa-user'></i>Login</Nav.Link>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Container>

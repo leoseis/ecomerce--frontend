@@ -26,7 +26,7 @@ function Rating({value,text,color}) {
         </span>  
         <span>
            <i style={{color}} className={
-               value >=4?'fas fa-star' //solid star
+               value >=4?'fas fa-star' //solid starb
                :value>=3.5?'fas fa-star-half-alt':'far fa-star'
            }></i>   
               
