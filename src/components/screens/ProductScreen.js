@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Button, Card } from "react-bootstrap";
 import products from "../../product";
+import Rating from "../Rating";
 
 function ProductScreen() {
   const { id } = useParams();
@@ -33,6 +34,17 @@ function ProductScreen() {
             <ListGroup.Item>
               <strong>Price: </strong>${product.price}
             </ListGroup.Item>
+            
+            <ListGroup.Item>
+         <Rating
+         value={product.rating}
+         text={`${product.numReviews}reviews`}
+         color={'fe825'}
+         
+         />
+            </ListGroup.Item>
+            
+
             <ListGroup.Item>
               <strong>Description: </strong>{product.description}
             </ListGroup.Item>
