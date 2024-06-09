@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Button, Card } from "react-bootstrap";
-import products from "../../product";
 import Rating from "../Rating";
+import axios from 'axios';
 
 function ProductScreen() {
+  const [product, setProduct] = useState(null);
   const { id } = useParams();
-  const product = products.find((p) => p._id === id);
+
+  useEffect(() => {
+    async function fetchProduct() {
+      try {
+        const { data } = await axios.get(`http://127.0.0.1:8000/api/products/${id}`);
+        setProduct(data);
+      } catch (error) {
+        console.error('Failed to fetch product:', error);
+      }
+    }
+    fetchProduct();
+  }, [id]);
 
   if (!product) {
     return (
@@ -34,17 +46,13 @@ function ProductScreen() {
             <ListGroup.Item>
               <strong>Price: </strong>${product.price}
             </ListGroup.Item>
-            
             <ListGroup.Item>
-         <Rating
-         value={product.rating}
-         text={`${product.numReviews}reviews`}
-         color={'fe825'}
-         
-         />
+              <Rating
+                value={product.rating}
+                text={`${product.numReviews} reviews`}
+                color='#f8e825'
+              />
             </ListGroup.Item>
-            
-
             <ListGroup.Item>
               <strong>Description: </strong>{product.description}
             </ListGroup.Item>
